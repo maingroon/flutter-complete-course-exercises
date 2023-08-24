@@ -1,31 +1,21 @@
+import 'package:basics/basic_styled_text.dart';
 import 'package:flutter/material.dart';
+
+import 'package:basics/basic_gradient_container.dart';
 
 void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Colors.black,
-                Colors.black87,
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
+        appBar: AppBar(
+          title: const BasicStyledText(
+            'DICE ROLLER 3000',
+            fontSize: 25,
           ),
-          child: const Center(
-            child: Text(
-              'Some text',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
+          backgroundColor: Colors.black,
+          centerTitle: true,
         ),
+        body: BasicGradientContainer.dark(),
       ),
     ),
   );
